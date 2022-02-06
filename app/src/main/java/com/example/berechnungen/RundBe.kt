@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 
 class RundBe : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,7 @@ class RundBe : AppCompatActivity() {
         val boden = findViewById<EditText>(R.id.boden).text
         val hoehe = findViewById<EditText>(R.id.hoehe).text
         val wand = findViewById<EditText>(R.id.wand).text
+        val ergebnis = findViewById<TextView>(R.id.erg2)
 
 
         berechnen.setOnClickListener{
@@ -29,6 +31,21 @@ class RundBe : AppCompatActivity() {
 
             //berechnung des außenraduis
             val ausrad = inrad + wand.toString().toDouble()
+
+            //berechnung des klammerwertes
+            var erg = Math.pow(ausrad, 2.0) - Math.pow(inrad, 2.0)
+
+            //endgültige berechnung für rohr
+            erg = pi * hoeheohneb.toString().toDouble() * erg
+
+            //volumen boden
+            var ergkreis = pi * Math.pow(ausrad, 2.0) * boden.toString().toDouble()
+
+            //ausrechnen des endergebnisses
+            erg = ergkreis + erg
+
+            var ergebn = String.format("%.2f", erg)
+            ergebnis.text = "$ergebn m³"
 
 
 
