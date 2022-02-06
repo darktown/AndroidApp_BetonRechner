@@ -13,11 +13,11 @@ class BogenBerechnen : AppCompatActivity() {
 
         val buberechnen = findViewById<Button>(R.id.buBerechnung)
         val zur = findViewById<Button>(R.id.buBack)
-        var durchmesser = findViewById<EditText>(R.id.durchmesser).text
-        var winkel = findViewById<EditText>(R.id.winkel).text
+        val durchmesser = findViewById<EditText>(R.id.durchmesser).text
+        val winkel = findViewById<EditText>(R.id.winkel).text
         val pi = kotlin.math.PI
-        var ergebnis = findViewById<TextView>(R.id.erg)
-        var erg = 0.00
+        val ergebnis = findViewById<TextView>(R.id.erg)
+
 
 
         buberechnen.setOnClickListener {
@@ -31,7 +31,7 @@ class BogenBerechnen : AppCompatActivity() {
                 ergebnis.text = "Bitte einen Durchmesser und Winkel angeben"
             }
             else {
-                erg = pi * durchmesser.toString().toDouble() * winkel.toString().toDouble() / 360
+                var erg = pi * durchmesser.toString().toDouble() * winkel.toString().toDouble() / 360
                 var ergebn = String.format("%.2f", erg)
                 ergebnis.text = "$ergebn m"
 

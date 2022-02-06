@@ -2,9 +2,82 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ergebnis"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RundBe">
+
+    <TextView
+        android:id="@+id/erg2"
+        android:layout_width="206dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="296dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/winkel"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <Button
+        android:id="@+id/buBerechnung2"
+        android:layout_width="196dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="195dp"
+        android:text="@string/berechnung"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:text="Höhe Gesamt"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/boden"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="16dp"
+        android:text="Wandstärke in m"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/boden"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/Erg"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="16dp"
+        android:text="Ergebnis: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/boden"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/innen"
@@ -13,8 +86,9 @@
         android:layout_marginStart="128dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:background="#ECECEC"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +97,8 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="132dp"
-        android:layout_height="44dp"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
         android:layout_marginTop="64dp"
         android:text="Innen Durchmesser"
         android:textSize="16sp"
@@ -34,14 +108,15 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="130dp"
-        android:layout_height="41dp"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:text="Boden Höhe"
+        android:text="Boden Höhe in m"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/boden"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -51,12 +126,46 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="20dp"
+        android:background="#ECECEC"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/innen"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/hoehe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="92dp"
+        android:background="#ECECEC"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/innen"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/wand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="160dp"
+        android:background="#ECECEC"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/innen"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
