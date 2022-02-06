@@ -10,7 +10,7 @@ class RundBe : AppCompatActivity() {
         setContentView(R.layout.activity_rund_be)
 
         val innen = findViewById<EditText>(R.id.innen).text
-        //val rad = innen.toString().toDouble() / 2
+        val rad = innen.toString().toDouble() / 2
         val pi = kotlin.math.PI
         val boden = findViewById<EditText>(R.id.boden).text
         //val bo = boden.toString().toDouble()
