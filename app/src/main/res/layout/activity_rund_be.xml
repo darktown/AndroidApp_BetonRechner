@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".RundBe">
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="130dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:text="Höhe Gesamt"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/boden"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
     <EditText
         android:id="@+id/innen"
         android:layout_width="wrap_content"
@@ -23,8 +37,8 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="132dp"
-        android:layout_height="44dp"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
         android:layout_marginTop="64dp"
         android:text="Innen Durchmesser"
         android:textSize="16sp"
@@ -51,6 +65,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
         android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/innen"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/hoehe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="92dp"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
