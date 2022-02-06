@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Berechnungen</string>
+    <string name="buBogen">Bogenlänge</string>
+    <string name="durch">Durchmesser</string>
+    <string name="winkel">Winkel</string>
+    <string name="ergebnis">Ergebnis: </string>
+    <string name="back">Zurück</string>
+    <string name="berechnung">Berechnen</string>
+    <string name="menge">Betonmenge</string>
+    <string name="lenght_beton">Länge</string>
+    <string name="breite">Breite</string>
+    <string name="height_beton">Höhe</string>
+</resources>
