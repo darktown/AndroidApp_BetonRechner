@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         /*
-            Hier kommt der nächste Link zur Activity
+
        */
 
     }
